@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключение CSS файла -->
+</head>
+<body>
+<div class="calculator"> <!-- Контейнер калькулятора -->
+    <div class="display" id="iphoneTotal">0</div> <!-- Дисплей калькулятора, начальное значение 0 -->
+    <div class="buttons"> <!-- Контейнер кнопок -->
+        <!-- Строка кнопок: AC, log, %, / -->
+        <button class="btn aaa" onclick="resetIphone()">AC</button>
+        <button class="btn aaa" onclick="toggleSign()">log</button>
+        <button class="btn aaa" onclick="percentage()">%</button>
+        <button class="btn operation" onclick="appendOperator('/')">/</button>
+
+        <!-- Строка кнопок: 7, 8, 9, X -->
+        <button class="btn" onclick="appendNumber(7)">7</button>
+        <button class="btn" onclick="appendNumber(8)">8</button>
+        <button class="btn" onclick="appendNumber(9)">9</button>
+        <button class="btn operation" onclick="appendOperator('*')">X</button>
+
+        <!-- Строка кнопок: 4, 5, 6, - -->
+        <button class="btn" onclick="appendNumber(4)">4</button>
+        <button class="btn" onclick="appendNumber(5)">5</button>
+        <button class="btn" onclick="appendNumber(6)">6</button>
+        <button class="btn operation" onclick="appendOperator('-')">-</button>
+
+        <!-- Строка кнопок: 1, 2, 3, + -->
+        <button class="btn" onclick="appendNumber(1)">1</button>
+        <button class="btn" onclick="appendNumber(2)">2</button>
+        <button class="btn" onclick="appendNumber(3)">3</button>
+        <button class="btn operation" onclick="appendOperator('+')">+</button>
+
+        <!-- Строка кнопок: 0 (занимает две колонки), ., = -->
+        <button class="btn zero" onclick="appendNumber(0)">0</button>
+        <button class="btn" onclick="appendDecimal()">.</button>
+        <button class="btn operation" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- Подключение JavaScript файла -->
+</body>
+</html>
